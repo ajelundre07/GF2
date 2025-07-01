@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío de Preguntas</title>
+    <link rel="stylesheet" href="Marta.css">
+    <script type="text/javascript" src="Marta.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafío de Conocimientos</h1>
+            <p class="description">Responde correctamente las preguntas para desbloquear videos y avanzar al siguiente nivel. ¡Demuestra lo que sabes!</p>
+        </header>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="level-indicator" id="levelIndicator"></div>
+        
+        <div class="completion-message" id="completionMessage">
+            ¡Felicidades! Has completado todos los niveles
+        </div>
+        
+        <!-- Pregunta 1 -->
+        <div class="question-container active" id="question1">
+            <div class="question-number">Pregunta 1 de 7</div>
+            <div class="question-text">¿Cuál es el río más largo del mundo?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer1" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(1)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback1">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 1 -->
+        <div class="video-container" id="videoContainer1">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mhkepDfKgm4?si=i_yZWF-T6e3MvM5y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(1)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 2 -->
+        <div class="question-container" id="question2">
+            <div class="question-number">Pregunta 2 de 7</div>
+            <div class="question-text">¿En qué año el hombre llegó a la Luna por primera vez?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer2" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(2)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback2">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video-container" id="videoContainer2">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/sTBIr65cL_E" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(2)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 3 -->
+        <div class="question-container" id="question3">
+            <div class="question-number">Pregunta 3 de 7</div>
+            <div class="question-text">¿Cuál es el metal más abundante en la corteza terrestre?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer3" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(3)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback3">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video-container" id="videoContainer3">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/VyQ8Tb85HrU" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(3)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 4 -->
+        <div class="question-container" id="question4">
+            <div class="question-number">Pregunta 4 de 7</div>
+            <div class="question-text">¿Cuál es el país con más islas en el mundo?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer4" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(4)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback4">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 4 -->
+        <div class="video-container" id="videoContainer4">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/9fSdD8sR3kM" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(4)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 5 -->
+        <div class="question-container" id="question5">
+            <div class="question-number">Pregunta 5 de 7</div>
+            <div class="question-text">¿Cuál es el elemento químico más ligero?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer5" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(5)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback5">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 5 -->
+        <div class="video-container" id="videoContainer5">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/r4sP1E1Jd_Y" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(5)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 6 -->
+        <div class="question-container" id="question6">
+            <div class="question-number">Pregunta 6 de 7</div>
+            <div class="question-text">¿Cuál es el océano más grande del planeta?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer6" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(6)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback6">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 6 -->
+        <div class="video-container" id="videoContainer6">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/U93QRMcQU5Y" allowfullscreen></iframe>
+            </div>
+            <button class="next-btn" onclick="nextQuestion(6)">Continuar a la Siguiente Pregunta</button>
+        </div>
+        
+        <!-- Pregunta 7 -->
+        <div class="question-container" id="question7">
+            <div class="question-number">Pregunta 7 de 7</div>
+            <div class="question-text">¿En qué país se encuentra la Gran Barrera de Coral?</div>
+            <div class="answer-form">
+                <input type="text" class="answer-input" id="answer7" placeholder="Escribe tu respuesta aquí...">
+                <button class="submit-btn" onclick="checkAnswer(7)">Verificar Respuesta</button>
+            </div>
+            <div class="feedback error" id="feedback7">Respuesta incorrecta. Intenta de nuevo.</div>
+        </div>
+        
+        <!-- Video 7 -->
+        <div class="video-container" id="videoContainer7">
+            <div class="video-title">¡Respuesta Correcta! Video Desbloqueado:</div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/6Ft9lO6gD6U" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="counter" id="counter">Respuestas correctas: <span id="correctCount">0</span>/7</div>
+    </div>
+
+</body>
+</html>
